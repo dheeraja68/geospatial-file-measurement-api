@@ -1,0 +1,28 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# SQLite database
+*.db
+
+# Uploaded files
+storage/uploads/*
+storage/extracted/*
+
+# Keep folder structure
+!storage/uploads/.gitkeep
+!storage/extracted/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
