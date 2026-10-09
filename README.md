@@ -176,6 +176,22 @@ The application separates API routes, geospatial processing, measurement logic, 
 - **CRS handler:** transforms geometries to a projected coordinate reference system for measurement.
 - **Database layer:** stores file metadata and individual feature results.
 
+- 
+```mermaid
+flowchart TD
+    A["Client / Swagger UI"] --> B["FastAPI API Layer"]
+    B --> C["File Upload & Validation"]
+    C --> D["GeoPandas File Processor"]
+    D --> E["CRS Handler"]
+    E --> F["Measurement Service"]
+    F --> G["SQLAlchemy Database Layer"]
+    G --> H[("SQLite Database")]
+    H --> I["File Details API"]
+    H --> J["Measurements API"]
+    I --> K["JSON Response"]
+    J --> K
+```
+
 ## Processing Flow
 
 1. Receive a KML file or zipped Shapefile.
